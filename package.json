@@ -1,0 +1,48 @@
+{
+  "name": "grunt-css-check",
+  "description": "Checks css and html files for missing classes",
+  "version": "0.1.0",
+  "homepage": "https://github.com/akselsson/grunt-css-check",
+  "author": {
+    "name": "Patrik Akselsson",
+    "email": "pakselsson@ebay.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/akselsson/grunt-css-check.git"
+  },
+  "bugs": {
+    "url": "https://github.com/akselsson/grunt-css-check/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/akselsson/grunt-css-check/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "esprima": "~1.2.2",
+    "promise": "~6.0.1",
+    "css": "~2.1.0",
+    "htmlparser2": "~3.8.2",
+    "underscore": "~1.7.0"
+  }
+}
