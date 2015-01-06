@@ -27,4 +27,12 @@ exports.html = {
         ]);
         test.done();
     },
+    ignore_razor_statements: function(test) {
+        test.expect(1);
+        var actual = html('<div class="@class_1"/>','fileName');
+        test.deepEqual(actual,[
+            { file: 'fileName', classes: []}
+        ]);
+        test.done();
+    },
 };
