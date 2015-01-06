@@ -45,10 +45,11 @@ module.exports = function(grunt) {
             ignore: this.data.ignore,
         });
 
-        checker.check(
-            parseFiles(this.data.css,css),
-            parseFiles(this.data.html,html),
-            parseFiles(this.data.js,js)
+        checker.check({
+            css: parseFiles(this.data.css,css),
+            html: parseFiles(this.data.html,html),
+            js: parseFiles(this.data.js,js)
+        }
         );
 
     });
