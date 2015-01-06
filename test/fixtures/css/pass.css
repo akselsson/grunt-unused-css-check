@@ -1,0 +1,22 @@
+
+
+.simple {
+    
+}
+
+.simple .nested {
+
+}
+
+.js-class {
+
+}
+
+/* all these should be ignored */
+
+.external {
+
+}
+.external-prefix-first {
+
+}

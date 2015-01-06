@@ -30,10 +30,18 @@ module.exports = function(grunt) {
 
         // Configuration to be run (and then tested).
         css_check: {
-            default_options: {
-                css: ['test/fixtures/css/*.css'],
-                html: ['test/fixtures/html/*.*'],
-                js: ['test/fixtures/js/*.js'],
+            pass: {
+                css: ['test/fixtures/css/pass.css'],
+                html: ['test/fixtures/html/pass.html'],
+                js: ['test/fixtures/js/pass.js'],
+                ignore: ["external",/external-prefix-.*/],
+                checkCss: true,
+                checkHtml: true
+            },
+            fail: {
+                css: ['test/fixtures/css/fail.css'],
+                html: ['test/fixtures/html/fail.html'],
+                js: ['test/fixtures/js/fail.js'],
                 ignore: ["external",/external-prefix-.*/],
                 checkCss: true,
                 checkHtml: true
@@ -57,7 +65,7 @@ module.exports = function(grunt) {
 
     // Whenever the "test" task is run, first clean the "tmp" dir, then run this
     // plugin's task(s), then test the result.
-    grunt.registerTask('test', ['clean', 'css_check', 'nodeunit']);
+    grunt.registerTask('test', ['clean', 'css_check:pass', 'nodeunit']);
 
     // By default, lint and run all tests.
     grunt.registerTask('default', ['jshint', 'test']);
