@@ -27,20 +27,24 @@ module.exports = function(grunt) {
         // Configuration to be run (and then tested).
         css_check: {
             pass: {
-                css: ['test/fixtures/css/pass.css'],
-                html: ['test/fixtures/html/pass.html'],
-                js: ['test/fixtures/js/pass.js'],
-                ignore: ["external",/external-prefix-.*/],
+                options: {
+                    css: ['test/fixtures/css/pass.css'],
+                    html: ['test/fixtures/html/pass.html'],
+                    js: ['test/fixtures/js/pass.js'],
+                    ignore: ["external",/external-prefix-.*/],
                 checkCss: true,
                 checkHtml: true
+                }
             },
             fail: {
-                css: ['test/fixtures/css/fail.css'],
-                html: ['test/fixtures/html/fail.html'],
-                js: ['test/fixtures/js/fail.js'],
-                ignore: ["external",/external-prefix-.*/],
+                options: {
+                    css: ['test/fixtures/css/fail.css'],
+                    html: ['test/fixtures/html/fail.html'],
+                    js: ['test/fixtures/js/fail.js'],
+                    ignore: ["external",/external-prefix-.*/],
                 checkCss: true,
                 checkHtml: true
+                }
             },
         },
 

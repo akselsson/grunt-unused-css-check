@@ -42,15 +42,16 @@ module.exports = function(grunt) {
 
         var checker = new Checker({
             logger: logger,
-            ignore: this.data.ignore,
+            ignore: options.ignore,
         });
 
         checker.check({
-            css: parseFiles(this.data.css,css),
-            html: parseFiles(this.data.html,html),
-            js: parseFiles(this.data.js,js)
-        }
-        );
+            css: parseFiles(options.css,css),
+            html: parseFiles(options.html,html),
+            js: parseFiles(options.js,js),
+            checkCss: options.checkCss,
+            checkHtml: options.checkHtml
+        });
 
     });
 
