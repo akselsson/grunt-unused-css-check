@@ -27,11 +27,19 @@ exports.html = {
         ]);
         test.done();
     },
-    ignore_razor_statements: function(test) {
+    ignore_simple_razor_statements: function(test) {
         test.expect(1);
-        var actual = html('<div class="@class_1"/>','fileName');
+        var actual = html('<div class="class_1 @razor_class class_2"/>','fileName');
         test.deepEqual(actual,[
-            { file: 'fileName', classes: []}
+            { file: 'fileName', classes: ['class_1', 'class_2']}
+        ]);
+        test.done();
+    },
+    bail_out_on_complex_razor_statements: function(test) {
+        test.expect(1);
+        var actual = html('<div class="class_1 @ifTrue( a == b, "class_a", "class_b" ) ignored_class"><div class="class_2"/></div>','fileName');
+        test.deepEqual(actual,[
+            { file: 'fileName', classes: ['class_1', 'class_2']}
         ]);
         test.done();
     },
