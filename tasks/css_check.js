@@ -18,8 +18,7 @@ var _ = require('underscore');
 module.exports = function(grunt) {
 
     function parseFiles(files,parser){
-        var allFiles = grunt.file.expand(files);
-        var parsed = allFiles.map(function(file){
+        var parsed = files.map(function(file){
             var src = grunt.file.read(file);
             return parser(src,file);
         });
