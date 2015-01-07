@@ -26,13 +26,29 @@ module.exports = function(grunt) {
         return _.flatten(parsed);
     }
 
+    function parse(files){
+        var obj = {};
+        files.forEach(function(file){
+            switch(file.dest){
+                case 'css':
+                    obj.css = parseFiles(file.src,css);
+                    break;
+                case 'html':
+                    obj.html = parseFiles(file.src,html);
+                    break;
+                case 'js':
+                    obj.js = parseFiles(file.src,js);
+                    break;
+                default:
+                   grunt.log.warn('Unknown file type: ' + file.dest);
+            }
+        });
+        return obj;
+    }
 
     grunt.registerMultiTask('css_check', 'Checks css and html files for missing classes', function() {
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
-            css: [],
-            html: [],
-            js: [],
             ignore: [],
             checkCss: true,
             checkHtml: true
@@ -45,13 +61,11 @@ module.exports = function(grunt) {
             ignore: options.ignore,
         });
 
-        checker.check({
-            css: parseFiles(options.css,css),
-            html: parseFiles(options.html,html),
-            js: parseFiles(options.js,js),
-            checkCss: options.checkCss,
-            checkHtml: options.checkHtml
-        });
+        var config = parse(this.files);
+        config.checkCss = options.checkCss;
+        config.checkHtml = options.checkHtml;
+
+        checker.check(config);
 
     });
 
