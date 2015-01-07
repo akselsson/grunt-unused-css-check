@@ -4,12 +4,6 @@
 [31m>> [39msecond-class
 [31m>> [39mtest/fixtures/css/fail.css:
 [31m>> [39mnested
+[33mWarning: 2 missing classes in 2 locations Use --force to continue.[39m
 
---------------------------------------------------------------------------------
-Summary:
-2 missing classes in 2 locations
-
-If the classes are genereated dynamically, add this to your ignore list:
-second-class,nested
-
-[32mDone, without errors.[39m
+[31mAborted due to warnings.[39m
