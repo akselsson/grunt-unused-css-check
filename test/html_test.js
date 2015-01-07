@@ -27,6 +27,14 @@ exports.html = {
         ]);
         test.done();
     },
+    include_script_templates: function(test) {
+        test.expect(1);
+        var actual = html('<script type="text/template"><div class="script_class"/></script>','fileName');
+        test.deepEqual(actual,[
+            { file: 'fileName', classes: ['script_class']}
+        ]);
+        test.done();
+    },
     ignore_simple_razor_statements: function(test) {
         test.expect(1);
         var actual = html('<div class="class_1 @razor_class class_2"/>','fileName');
