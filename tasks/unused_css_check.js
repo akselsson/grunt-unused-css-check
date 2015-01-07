@@ -52,7 +52,7 @@ module.exports = function(grunt) {
         return obj;
     }
 
-    grunt.registerMultiTask('css_check', 'Checks css and html files for missing classes', function() {
+    grunt.registerMultiTask('unused_css_check', 'Checks css and html files for missing classes', function() {
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
             ignore: [],

@@ -9,10 +9,10 @@ execOptions = {
 }
 ;
 
-exports.css_check = {
+exports.unused_css_check = {
     pass: function(test) {
         test.expect(2);
-        exec('grunt css_check:pass',execOptions,function(error, stdout) {
+        exec('grunt unused_css_check:pass',execOptions,function(error, stdout) {
             //grunt.file.write('test/expected/pass',stdout);
             var actual = stdout;
             var expected = grunt.file.read('test/expected/pass');
@@ -26,7 +26,7 @@ exports.css_check = {
     },
     fail: function(test) {
         test.expect(2);
-        exec('grunt css_check:fail',execOptions,function(error, stdout) {
+        exec('grunt unused_css_check:fail',execOptions,function(error, stdout) {
             //grunt.file.write('test/expected/fail',stdout);
             var actual = stdout;
             var expected = grunt.file.read('test/expected/fail');

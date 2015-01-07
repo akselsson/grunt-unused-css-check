@@ -1,4 +1,4 @@
-[4mRunning "css_check:fail" (css_check) task[24m
+[4mRunning "unused_css_check:fail" (unused_css_check) task[24m
 [31m>> [39mClasses that only exists in one file:
 [31m>> [39mtest/fixtures/fail/fail.html:
 [31m>> [39msecond-class

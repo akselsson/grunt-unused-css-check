@@ -1,23 +1,23 @@
 {
-  "name": "grunt-css-check",
+  "name": "grunt-unused-css-check",
   "description": "Checks css and html files for missing classes",
   "version": "0.1.0",
-  "homepage": "https://github.com/akselsson/grunt-css-check",
+  "homepage": "https://github.com/akselsson/grunt-unused-css-check",
   "author": {
     "name": "Patrik Akselsson",
     "email": "pakselsson@ebay.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/akselsson/grunt-css-check.git"
+    "url": "git://github.com/akselsson/grunt-unused-css-check.git"
   },
   "bugs": {
-    "url": "https://github.com/akselsson/grunt-css-check/issues"
+    "url": "https://github.com/akselsson/grunt-unused-css-check/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/akselsson/grunt-css-check/blob/master/LICENSE-MIT"
+      "url": "https://github.com/akselsson/grunt-unused-css-check/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {

@@ -25,7 +25,7 @@ module.exports = function(grunt) {
         },
 
         // Configuration to be run (and then tested).
-        css_check: {
+        unused_css_check: {
             pass: {
                 files: {
                     css: ['test/fixtures/pass/*.css'],
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
 
     // Whenever the "test" task is run, first clean the "tmp" dir, then run this
     // plugin's task(s), then test the result.
-    grunt.registerTask('test', [ 'css_check:pass', 'nodeunit']);
+    grunt.registerTask('test', [ 'unused_css_check:pass', 'nodeunit']);
 
     // By default, lint and run all tests.
     grunt.registerTask('default', ['jshint', 'test']);
