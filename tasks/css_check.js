@@ -18,7 +18,14 @@ var _ = require('underscore');
 module.exports = function(grunt) {
 
     function parseFiles(files,parser){
-        var parsed = files.map(function(file){
+        var parsed = files.filter(function(filepath) {
+            if (!grunt.file.exists(filepath)) {
+                grunt.log.warn('Source file "' + filepath + '" not found.');
+                return false;
+            } else {
+                return true;
+            }
+        }).map(function(file){
             var src = grunt.file.read(file);
             return parser(src,file);
         });
