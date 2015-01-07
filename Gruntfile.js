@@ -28,9 +28,9 @@ module.exports = function(grunt) {
         css_check: {
             pass: {
                 files: {
-                    css: ['test/fixtures/css/pass.css'],
-                    html: ['test/fixtures/html/pass.html'],
-                    js: ['test/fixtures/js/pass.js'],
+                    css: ['test/fixtures/pass/*.css'],
+                    html: ['test/fixtures/pass/*.html'],
+                    js: ['test/fixtures/pass/*.js'],
                 },
                 options: {
                     checkCss: true,
@@ -40,9 +40,9 @@ module.exports = function(grunt) {
             },
             fail: {
                 files: {
-                    css: ['test/fixtures/css/fail.css'],
-                    html: ['test/fixtures/html/fail.html'],
-                    js: ['test/fixtures/js/fail.js'],
+                    css: ['test/fixtures/fail/*.css'],
+                    html: ['test/fixtures/fail/*.html'],
+                    js: ['test/fixtures/fail/*.js'],
                 },
                 options: {
                     checkCss: true,

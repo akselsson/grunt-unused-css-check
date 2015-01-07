@@ -1,8 +1,8 @@
 [4mRunning "css_check:fail" (css_check) task[24m
 [31m>> [39mClasses that only exists in one file:
-[31m>> [39mtest/fixtures/html/fail.html:
+[31m>> [39mtest/fixtures/fail/fail.html:
 [31m>> [39msecond-class
-[31m>> [39mtest/fixtures/css/fail.css:
+[31m>> [39mtest/fixtures/fail/fail.css:
 [31m>> [39mnested
 [33mWarning: 2 missing classes in 2 locations Use --force to continue.[39m
 
