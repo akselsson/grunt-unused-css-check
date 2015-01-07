@@ -26,10 +26,16 @@ In your project's Gruntfile, add a section named `unused_css_check` to the data 
 grunt.initConfig({
   unused_css_check: {
     options: {
-      // Task-specific options go here.
+        checkCss: true, //Check css-files for classes that do not exist in html
+        checkHtml: true, // Check html-files for classes that do not exist in css
+        ignore: [] //List of class name patterns to ignore (string or regexp)
     },
     your_target: {
-      // Target-specific file lists and/or options go here.
+        files: {
+            css: ['path to css files'],
+            html: ['path to html files'],
+            js: ['path to javascript files (optional)'],
+        }
     },
   },
 });
