@@ -21,4 +21,10 @@ exports.html = {
         test.deepEqual(actual,[]);
         test.done();
     },
+    string_with_html: function(test) {
+        test.expect(1);
+        var actual = js('html = \'<select class="pika-select pika-select-month" tabindex="-1">\'','fileName');
+        test.deepEqual(actual,['pika-select','pika-select-month']);
+        test.done();
+    },
 };
